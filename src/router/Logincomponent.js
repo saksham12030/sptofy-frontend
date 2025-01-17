@@ -6,10 +6,12 @@ import Textinput from '../Component/shared/Textinput';
 import PasswordText from '../Component/shared/PasswordText';
 import { Link, useNavigate } from "react-router-dom";
 import { makeUnauthenticatedAsync } from "../utils/helper";
+import { backend } from '../utils/scripter';
 
 
 
 const Logincomponent = () => {
+  console.log(backend);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //eslint-disable-next-line
