@@ -5,6 +5,7 @@ export const makeUnauthenticatedAsync = async (route, body) => {
  
     headers: {
       "Content-type": "application/json",
+      'Access-Control-Allow-Origin': '*',
     },
     body: JSON.stringify(body),
   });
@@ -18,6 +19,7 @@ export const makeAuthenticatedAsync = async (route, body) => {
     method: "POST",
     headers: {
       "Content-type": "application/json",
+      'Access-Control-Allow-Origin': '*',
       "Authorization":`Bearer ${token}`
     },
     body: JSON.stringify(body),
@@ -32,6 +34,7 @@ export const makeAuthenticatedGetAsync = async (route) => {
     method: "GET",
     headers: {
       "Content-type": "application/json",
+      'Access-Control-Allow-Origin': '*',
       "Authorization":`Bearer ${token}`
     },
   });
