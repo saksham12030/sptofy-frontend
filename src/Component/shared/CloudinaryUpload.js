@@ -2,7 +2,7 @@ import { openUploadWidget } from "../../utils/CloudinaryService";
 import { cloudinary_preset } from "../../config";
 import songContext from "../../context/songContext";
 import { useContext } from "react";
-
+console.log(cloudinary_preset);
 const CloudinaryUpload = ({ setUrl, setSongName}) => {
    const {setDurationinSeconds } =useContext(songContext); // Access setDuration from context
 
